@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    flex-shrink: 0;
+}
+.song-card {
+            background: #8a8ad7;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .song-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 8px 32px rgba(224, 82, 82, 0.28);
+        }
+        .song-card-image img {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .song-card-title {
+            color: #fff;
+        }
+        .song-card-artist {
+            color: #FFD700;
+        }
+        .song-card-duration {
+            color: #bdbdbd;
+        }
+        .song-card-play-btn, .song-card-download-btn {
+            font-weight: 600;
+            font-size: 1rem;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        .song-card-play-btn i, .song-card-download-btn i {
+            font-size: 1.1rem;
+        }
+
+        .music-tab-btn {
+    background: transparent;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+.music-tab-btn.active, .music-tab-btn:focus {
+    background: #FFD700;
+    color: #232323;
+}
+.song-card {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #18181b;
+}
+.song-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(224, 82, 82, 0.28);
+}
+.song-card img.blur-sm {
+    filter: blur(12px) brightness(0.7);
+    transition: filter 0.3s;
+}
+.song-card .w-32.h-32 {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.song-card-content {
+    position: relative;
+    z-index: 2;
+}
+.song-card-title {
+    color: #fff;
+}
+.song-card-artist {
+    color: #FFD700;
+}
+.song-card-duration {
+    color: #e5e5e5;
+}
+.song-card-play-btn, .song-card-download-btn {
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.song-card-play-btn i, .song-card-download-btn i {
+    font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+    .music-tab-btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
+    .song-card { min-height: 320px; }
+}
+
+/* ...existing code... */
+.music-tab-btn {
+    background: transparent;
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.music-tab-btn.active, .music-tab-btn:focus {
+    background: #FFD700;
+    color: #232323;
+    box-shadow: 0 4px 20px 0 rgba(255, 215, 0, 0.25);
+}
+.music-tab-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 0; height: 0;
+    background: rgba(255,215,0,0.15);
+    border-radius: 9999px;
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+    opacity: 0;
+}
+.music-tab-btn:active::after,
+.music-tab-btn.active::after {
+    width: 180%;
+    height: 180%;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+/* Loader spinner */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #FFD700;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+.animate-fade-in {
+    animation: fadeInUp 0.4s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+#musicPlayerBar {
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+}
+#musicPlayerBar.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+}
+#musicPlayerBar:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}

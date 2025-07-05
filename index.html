@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopEmpire - One Voice One Stand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/musical-notes.png" />
+    <link rel="stylesheet" href="./topempire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ugandan: {
+                            gold: '#FFD700',
+                            red: '#FF6B35',
+                            black: '#2D2D2D',
+                            green: '#4CAF50'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="navbar-container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <!-- Left: Logo and Name -->
+            <div class="flex items-center space-x-3 min-w-[180px]">
+                <img src="./logo.jpg" alt="UgBeats Logo" class="w-12 h-12 rounded-full shadow-lg border-2 border-white">
+                <span class="site-title text-2xl md:text-3xl font-extrabold tracking-tight">TopEmpire</span>
+            </div>
+            <!-- Center: Nav Tabs -->
+            <nav class="flex-1 flex justify-center">
+                <div class="nav-tabs flex space-x-8">
+                    <a href="./index.html" class="nav-link text-lg md:text-xl font-bold px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Home</a>
+                    <a href="./music.html" class="nav-link text-lg md:text-xl font-bold px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Music</a>
+                    <a href="./band.html" class="nav-link text-lg md:text-xl font-bold px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Band</a>
+                    <a href="./contact.html" class="nav-link text-lg md:text-xl font-bold px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">Contact</a>
+                </div>
+            </nav>
+            <!-- Right: Search and Theme Toggle -->
+            <div class="flex items-center space-x-4 min-w-[220px] justify-end">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Search artists, songs..." 
+                        class="search-input w-full px-4 py-2 pl-10 text-base rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder-white/70 search-glow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    >
+                    <i class="fas fa-search absolute left-3 top-3 text-white/70"></i>
+                </div>
+                <button id="darkModeToggle" class="theme-toggle-btn p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors flex items-center justify-center" title="Toggle theme">
+                    <i id="themeIcon" class="fas fa-moon text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative gradient-bg text-white py-20 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80" alt="Ugandan Music Crowd" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 slide-in drop-shadow-lg">
+                Discover Ugandan Music
+            </h2>
+            <p class="text-2xl mb-8 opacity-90 slide-in">
+                From <span class="font-bold text-ugandan-gold">Afrobeat</span> to <span class="font-bold text-ugandan-red">Traditional Folk</span> – Experience the Rich Sounds of Uganda
+            </p>
+            <div class="flex justify-center space-x-2 mb-8">
+                <div class="w-2 bg-white music-wave rounded" style="animation-delay: 0s; height: 20px;"></div>
+                <div class="w-2 bg-white music-wave rounded" style="animation-delay: 0.1s; height: 20px;"></div>
+                <div class="w-2 bg-white music-wave rounded" style="animation-delay: 0.2s; height: 20px;"></div>
+                <div class="w-2 bg-white music-wave rounded" style="animation-delay: 0.3s; height: 20px;"></div>
+                <div class="w-2 bg-white music-wave rounded" style="animation-delay: 0.4s; height: 20px;"></div>
+            </div>
+            <img src="https://img.icons8.com/color/96/000000/africa.png" alt="Africa Icon" class="mx-auto mt-6 drop-shadow-lg" />
+        </div>
+    </section>
+
+
+        <!-- Hero Section -->
+    <section class="home-hero">
+        <h1>Welcome to TopEmpire</h1>
+        <div class="home-call">Call us! +256 (0) 417 892000</div>
+        <div class="home-desc">
+            With years of experience, <a href="#" style="color:#FFD700;text-decoration:underline;">TopEmpire</a> is one of the leading Audio and Film Production Companies in Kampala, Uganda and East Africa, also specializing in Video production, TV Commercial (TVC) production, Events Promotion and Talent Management. With an impressive team led by our experienced directors and producers, boasting both local and international experience and an extensive array of services for both Audio and Film, TopEmpire offers the complete package for any production needs.
+        </div>
+        <button class="home-btn">Our Story</button>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-title">Our Services</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Film Production">
+                <div class="service-card-title">Film Production</div>
+                <div class="service-card-desc">
+                    We are the best film production company in Kampala, Uganda and Africa working on international film and TV Commercial projects.
+                </div>
+                <div class="service-card-link">Learn More &rarr;</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Audio Production">
+                <div class="service-card-title">Audio Production</div>
+                <div class="service-card-desc">
+                    Our studio delivers the best audio production in Kampala, Uganda &amp; Africa with sound design and studio direction for TV &amp; radio advertising.
+                </div>
+                <div class="service-card-link">Learn More &rarr;</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Events">
+                <div class="service-card-title">Events</div>
+                <div class="service-card-desc">
+                    We are a full-service marketing and event planning company with vast experience in multiple industries.
+                </div>
+                <div class="service-card-link">Learn More &rarr;</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Label & Publishing">
+                <div class="service-card-title">Label &amp; Publishing</div>
+                <div class="service-card-desc">
+                    TopEmpire is a Record Label and Artist Management Company based in Kampala Uganda.
+                </div>
+                <div class="service-card-link">Learn More &rarr;</div>
+            </div>
+        </div>
+        <div class="clients-section">
+            <div class="clients-title">Some of our Clients</div>
+            <div class="clients-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/USAID-Logo.svg/2560px-USAID-Logo.svg.png" alt="USAID">
+                <img src="https://www.uhmg.org/wp-content/uploads/2018/10/UHMG-Logo.png" alt="UHMG">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/DStv_logo.png" alt="DSTV">
+                <img src="https://www.malariaconsortium.org/gallery/MC_logo.jpg" alt="Malaria Consortium">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Uganda_Waragi_logo.png" alt="Uganda Waragi">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Diageo_Logo.png" alt="Diageo">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2025 TopEmpire One Voice One Stand. All Rights Reserved.
+    </footer>
+
+
+    <script src="./topempire.js"></script>
+</body>
+</html>
